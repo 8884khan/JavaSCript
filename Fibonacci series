@@ -1,0 +1,23 @@
+function fibonacciGenerator(n) {
+    var a = 0;
+    var b = 1;
+    var temp;
+    var output = []
+    
+    if(n==1){
+        output.push(a)
+    }else if(n==2){
+        output.push(a,b);
+    }else{
+        output.push(a,b);
+        for(var i = 3;i<= n;i++){
+            temp = a + b;
+            a = b
+            b = temp
+            output.push(temp)
+        }
+    }
+    return output
+
+}
+fibonacciGenerator(10)
